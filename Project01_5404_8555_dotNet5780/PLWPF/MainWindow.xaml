@@ -1,0 +1,94 @@
+﻿<Window x:Class="PLWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PLWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Background="Transparent" Height="729" Width="1600" FontWeight="Bold">
+    <Window.Resources>
+        <Point x:Key="Point1" >10,10</Point>
+        <Style x:Key= "ButtonStyle" TargetType="Button">
+            <Setter Property= "FontWeight" Value="Bold"/>
+            <Setter Property= "BorderBrush" Value="Transparent"/>
+            <Setter Property= "Background" Value="#FFABCCEE"/>
+            <Setter Property= "FontSize" Value="22"/>
+            <Setter Property= "Foreground" Value="#FF2F17C5"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid  Height="729" Width="1600">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.Background >
+            <ImageBrush ImageSource="Resources\HP-fallback-image-1.jpg" Stretch="UniformToFill" TileMode="Tile"/>
+        </Grid.Background >
+        <Button Name="GR" Style="{StaticResource ButtonStyle}"  Content="דרישת לקוח" BorderThickness="4" HorizontalAlignment="Left" Height="60" Margin="612,408,0,0" VerticalAlignment="Top" Width="164" Click="Button_Click_1" MouseEnter="enter" MouseLeave="live" RenderTransformOrigin="{DynamicResource Point1}"    Cursor="">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button  Name="b2" Style="{StaticResource ButtonStyle}"  Content="יחידת אירוח" BorderThickness="4" HorizontalAlignment="Left" Height="60" Margin="87,404,0,0" VerticalAlignment="Top" Width="164" RenderTransformOrigin="10,10" Click="Button_Click_2" >
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button   Name="b3" Style="{StaticResource ButtonStyle}"  Content="מנהל האתר" BorderThickness="4" HorizontalAlignment="Left" Height="60" Margin="360,404,0,0" VerticalAlignment="Top" Width="164" Click="Button_Click_SiteOwner" RenderTransformOrigin="0.496,0.962"  FontWeight="Bold">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Label Name="Title" Content="          ברוכים הבאים&#xA;       לחופשת החלומות &#xA;" Foreground="#FF2F17C5" OpacityMask="#FFAFC526" HorizontalAlignment="Left" Height="164" Margin="130,240,0,0" VerticalAlignment="Top" Width="572" FontSize="48" FontWeight="Bold" FontFamily="Forte"/>
+        <Grid Name="grGR" Visibility="Collapsed" MouseLeave="grGR_MouseLeave"  HorizontalAlignment="Left" Height="186" Margin="606,467,0,0" VerticalAlignment="Top" Width="173">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button Name="AddGr"  Content="הוספה" BorderThickness="4" HorizontalAlignment="Left" Height="60" Margin="7,16,0,0" VerticalAlignment="Top" Width="164"  Click="Button_Click_AddGr" >
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+                <Button.Style>
+                    <StaticResource ResourceKey="ButtonStyle"/>
+                </Button.Style>
+            </Button>
+        </Grid>
+
+        <Grid Name="grHu" MouseLeave="grHu_MouseLeave" HorizontalAlignment="Left" Visibility="Collapsed"  Height="186" Margin="40,464,0,0" VerticalAlignment="Top" Width="252">
+            <Button  x:Name="AddHU"  Content="מארח חדש" BorderThickness="4" HorizontalAlignment="Left" Height="60" Margin="49,14,0,0" VerticalAlignment="Top" Width="164"  Click="Button_Click_AddHost" >
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+                <Button.Style>
+                    <StaticResource ResourceKey="ButtonStyle"/>
+                </Button.Style>
+            </Button>
+            <Button  x:Name="b2_Copy1"  Content="איזור אישי" BorderThickness="4" HorizontalAlignment="Left" Height="60" Margin="49,88,0,0" VerticalAlignment="Top" Width="164"  Click="Button_Click_PrivateHost" >
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+                <Button.Style>
+                    <StaticResource ResourceKey="ButtonStyle"/>
+                </Button.Style>
+            </Button>
+            <Label Content="" HorizontalAlignment="Left" Margin="49,70,0,0" VerticalAlignment="Top" Width="153" Height="20"/>
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="186" Margin="324,463,0,0" VerticalAlignment="Top" Width="232"/>
+        <Button Content="שאלות נפוצות" Foreground="#FF2F17C5" BorderBrush="Transparent" FontSize="16" Background="Transparent" HorizontalAlignment="Left" Margin="972,304,0,0" VerticalAlignment="Top" Width="133" Click="Button_Click" Height="38" FontWeight="bold"/>
+        <Button Content="משוב לאתר" Foreground="#FF2F17C5" BorderBrush="Transparent" FontSize="16" Background="Transparent" HorizontalAlignment="Left" Margin="989,342,0,0" VerticalAlignment="Top" Width="119" Click="Button_Click_feed" Height="38" FontWeight="bold"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,21 @@
+﻿<Window x:Class="PLWPF.Question"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PLWPF"
+        mc:Ignorable="d"
+        Title="Question" Height="611.212" Width="738.724">
+
+
+    <Grid>
+        <Grid.Background >
+            <ImageBrush ImageSource="Resources\image (1).png" Stretch="UniformToFill" TileMode="Tile"/>
+        </Grid.Background>
+        <Button Background="Transparent" BorderBrush="Transparent" Name="GoBack"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" Height="48" Click="BackButton_Click">
+            <Image Source="Resources\blue Arrow.png" Height="47" Width="50"/>
+
+        </Button>
+    </Grid>
+
+</Window>
